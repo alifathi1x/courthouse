@@ -1,7 +1,7 @@
-# noinspection PyTypeChecker
+from model.tools.validator import *
 class Person:
     def __init__(self, id, name, family):
-        self.id = id
+        self._id = id
         self._name = name
         self._family = family
 
@@ -21,7 +21,7 @@ class Person:
         return self._name
 
     def set_name(self, name):
-        if isinstance(name, str):
+        if name_validator(name):
             self._name = name
         else:
             raise ValueError("Invalid Name")
@@ -30,17 +30,16 @@ class Person:
         return self._family
 
     def set_family(self, family):
-        if family == str:
+        if name_validator(family):
             self._family = family
         else:
             raise ValueError("Invalid Family")
 
-    # noinspection PyTypeChecker
     id = property(get_id, set_id)
-    # noinspection PyTypeChecker
     name = property(get_name, set_name)
-    # noinspection PyTypeChecker
     family = property(get_family, set_family)
+
+
 
 
 
