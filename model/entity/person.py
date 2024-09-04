@@ -1,4 +1,7 @@
 from model.tools.validator import *
+
+
+# this class is for less coding for lawyer class and criminal person info
 class Person:
     def __init__(self, id, name, family):
         self._id = id
@@ -38,8 +41,3 @@ class Person:
     id = property(get_id, set_id)
     name = property(get_name, set_name)
     family = property(get_family, set_family)
-
-
-
-
-
