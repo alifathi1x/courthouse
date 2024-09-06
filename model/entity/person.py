@@ -8,8 +8,7 @@ class Person:
         self._name = name
         self._family = family
 
-    def __repr__(self):
-        return f"Person(id: {self.id}, name: {self.name}, family: {self.family})"
+
 
     def get_id(self):
         return self._id

@@ -3,7 +3,8 @@ from model.tools.validator import *
 
 
 class Criminal_Person(Person):
-    def __init__(self, national_id, address, crime_type):
+    def __init__(self,id,name,family,national_id,address,crime_type):
+        super().__init__(id,name,family)
         self._national_id = national_id
         self._address = address
         self._crime_type = crime_type
@@ -43,5 +44,9 @@ class Criminal_Person(Person):
     national_id = property(get_national_id, set_national_id)
     address = property(get_address, set_address)
     crime_type = property(get_crime_type, set_crime_type)
+
+
+criminal1 = Criminal_Person(1,"ali","mmmmm","1234567899","hughtughtughtughtug","rubbery")
+print(criminal1)
 
 
