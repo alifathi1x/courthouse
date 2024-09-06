@@ -1,6 +1,6 @@
 from datetime import date
 from model.entity.base import Base
-from sqlalchemy import Integer, DateTime, Column, Boolean, String
+from sqlalchemy import Integer, DateTime, Column, String
 
 
 class CourthouseDA(Base):
