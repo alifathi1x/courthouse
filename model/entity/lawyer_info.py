@@ -1,8 +1,9 @@
 from model.entity.person import Person
 
+
 class Lawyer_Info(Person):
-    def __init__(self,id, name, family, lawyer_license, lawyer_number):
-        super().__init__(id,name, family)
+    def __init__(self, id, name, family, lawyer_license, lawyer_number):
+        super().__init__(id, name, family)
         self._lawyer_license = lawyer_license
         self._lawyer_number = lawyer_number
 
@@ -33,5 +34,5 @@ class Lawyer_Info(Person):
     lawyer_license = property(get_lawyer_license, set_lawyer_license)
 
 
-lawyer1 = Lawyer_Info(1,"ali","mamam",True,1234555555)
+lawyer1 = Lawyer_Info(1, "ali", "mamam", True, 1234555555)
 print(lawyer1)
