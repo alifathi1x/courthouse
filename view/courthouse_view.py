@@ -1,3 +1,4 @@
+import textwrap
 import tkinter as tk
 from PIL import ImageTk, Image
 from tkinter import messagebox as msg
@@ -65,19 +66,21 @@ def open_new_window2():
         entry_family = tk.Entry(new_window, font="arial 10 bold", bd=3)
         entry_family.place(x=80, y=120)
 
-
         tk.Label(new_window, text="national ID:", font="arial 12 bold").place(x=10, y=180)
         entry_national_id = tk.Entry(new_window, font="arial 10 bold", bd=3)
         entry_national_id.place(x=110, y=180)
 
-
         tk.Label(new_window, text="Address:", font="arial 12 bold").place(x=10, y=245)
         entry_address = tk.Entry(new_window, font="arial 10 bold", bd=3)
-        entry_address.place(x=100,y=245)
+        entry_address.place(x=100, y=245)
 
         tk.Label(new_window, text="Crime-type:", font="arial 12 bold").place(x=10, y=305)
-        entry_crime_type = tk.Entry(new_window, font="arial 10 bold",bd=3)
+        entry_crime_type = tk.Entry(new_window, font="arial 10 bold", bd=3)
         entry_crime_type.place(x=110, y=305)
+
+        tk.Label(new_window, text="Crime Report:", font="arial 12 bold").place(x=10, y=350)
+        entry_crime_report = tk.Text(new_window, font="arial 10 bold", bd=3, width=40, height=5)
+        entry_crime_report.place(x=10, y=390)
 
         # Save function to capture input data and display in a messagebox
         def save_info():
@@ -95,18 +98,17 @@ def open_new_window2():
 
         # Save button
         save_button = tk.Button(new_window, text="Save", font="arial 12 bold", command=save_info)
-        save_button.place(x=250, y=370)
+        save_button.place(x=400, y=450)
 
         new_window.mainloop()
 
     open_new_window()
 
 
-
 root = tk.Tk()
 root.title("Court House")
 root.geometry("600x600")
-img = Image.open(r"C:\Users\Ali\PycharmProjects\pythonProject6\resourse\a.png")
+img = Image.open(r"C:\Users\Ali\PycharmProjects\courthouse\view\resourse\a.png")
 img = img.resize((600, 630))
 img = ImageTk.PhotoImage(img)
 tk.Label(master=root, image=img).pack(fill=tk.BOTH, expand=True)
